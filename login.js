@@ -22,4 +22,11 @@ document.addEventListener('DOMContentLoaded',function(){
 		return false;
 	}
 }
+	function validarPassword(password) {
+    if (password.length <= 8) {
+        console.log("La contraseña es válida.");
+    } else {
+        console.log("La contraseña debe tener 8 caracteres o menos.");
+    }
+}
 });
