@@ -1,10 +1,6 @@
 document.addEventListener('DOMContentLoaded',function(){
   console.log("Hello,world!");
-  var inputcorreo = document.getElementById('grupo__correo');
-  var inputpassword = document.getElementById ('grupo__password');
-  console.log(inputcorreo);
-  console.log(inputpassword);
-	
+ 
 	const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
 
