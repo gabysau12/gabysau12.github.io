@@ -58,8 +58,8 @@ inputs.forEach((input) => {
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
-	const correo = document.getElementById('correo');
-	if(campos.nombre && campos.password && campos.correo ){
+	const terminos = document.getElementById('terminos');
+	if(campos.nombre && campos.password && campos.correo && terminos.checked ){
 		formulario.reset();
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
