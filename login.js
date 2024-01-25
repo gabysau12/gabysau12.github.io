@@ -1,4 +1,11 @@
-const formulario = document.getElementById('formulario');
+document.addEventListener('DOMContentLoaded',function(){
+  console.log("Hello,world!");
+  var inputemail = document.getElementById('grupo__correo');
+  var inputpassword = document.getElementById ('grupo__password');
+  console.log(inputEmail);
+  console.log(inputPassword);
+	
+	const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
