@@ -3,7 +3,7 @@ const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	password: /^.{1,8}$/, // 1 a 8 digitos.
+	password: /^.{4,8}$/, // 4 a 8 digitos.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	
 }
