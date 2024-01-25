@@ -1,4 +1,4 @@
 
-  const nombre = document.getElementBtId("name")
+  const nombre = document.getElementById("name")
   
   
