@@ -1,48 +1,70 @@
  <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Email validation example</title>
-        <script type="text/javascript">
-            function validateEmail(){
-                
-                // Get our input reference.
-                var emailField = document.getElementById('user-email');
-                
-                // Define our regular expression.
-                var validEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
-
-                // Using test we can check if the text match the pattern
-                if( validEmail.test(emailField.value) ){
-                    alert('Email is valid, continue with form submission');
-                    return true;
-                }else{
-                    alert('Email is invalid, skip form submission');
-                    return false;
-                }
-            }
-          <style>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f6c8c7;
+      background-color: #f4f4f4;
       margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #f6c8c7;
+      background-color: #8B4513;
     }
-        </style>
-        </script>
-    </head>
-    <body>
-        <form>
-            <label for="user-email">Email: </label>
-            <input type="email" id="user-email" name="userEmail" />
-            <input type="submit" value="Validate" onclick="return validateEmail()" />
-             <label for="password">Password: </label>
-            <input type="password" id="password" name="password" />
-            <button type="submit">Submit</button>
-        </form>
-    </body>
-</html> 
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+
+    <label for="user-email">Email: </label>
+    <input type="email" id="user-email" name="userEmail" />
+    <input type="submit" value="Validate" onclick="return validateEmail()" />
+
+    <label for="contrasena">Contraseña:</label>
+    <input type="password" id="contrasena" name="contrasena" required>
+
+    <button type="submit">Iniciar sesión</button>
+  </form>
+
+</body>
+</html>
