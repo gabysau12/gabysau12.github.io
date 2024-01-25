@@ -4,7 +4,7 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
-	background: #E5E5E5;
+	background: #f6c8c7;
 }
 
 main {
@@ -119,7 +119,7 @@ main {
 
 .formulario__mensaje-exito {
 	font-size: 14px;
-	color: #119200;
+	color: #b0f2c2;
 	display: none;
 }
 
