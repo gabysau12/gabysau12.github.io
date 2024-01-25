@@ -1,78 +1,80 @@
- <!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validación de Formulario con Javascript</title>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/estilos.css">
 </head>
- <style>
-   body {
-      font-family: Arial, sans-serif;
-      background-color: #f6c8c7;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f6c8c7;
-    }
-
-    form{
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      max-width: 400px;
-      width: 100%;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    input {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 16px;
-      box-sizing: border-box;
-    }
-
-    button {
-      background-color: #4caf50;
-      color: #fff;
-      padding: 10px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-  </style>
 <body>
- <form action ="" method="POST" id="form">
-      <div class="form">
-          <h1>Registro</h1>
-          <div class="grupo">
-              <input type="text" name="" id="name" ><span class="barra"></span>
-              <label for="">Nombre</label>
-          </div>
-<div class="grupo">
-            <input type="email" name="" id="email" ><span class="barra"></span>
-            <label for="">Email</label>
-</div>
-<div class="grupo">
-           <input type="password" name="" id="password" ><span class="barra"></span>
-           <label for="">Password</label>
-  </div>
-           <button type="submit">Suscribirte</button>
-       <p class="warnings" id="warnings"></p>
-      </div>
- </form>
+	<main>
+		<form action="" class="formulario" id="formulario">
+			<!-- Grupo: Usuario -->
+			<div class="formulario__grupo" id="grupo__usuario">
+				<label for="usuario" class="formulario__label">Usuario</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+			</div>
 
- <script src="login.js"></script>
+			<!-- Grupo: Nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+			</div>
+
+			<!-- Grupo: Contraseña -->
+			<div class="formulario__grupo" id="grupo__password">
+				<label for="password" class="formulario__label">Contraseña</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="password" id="password">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+			</div>
+
+			<!-- Grupo: Contraseña 2 -->
+			<div class="formulario__grupo" id="grupo__password2">
+				<label for="password2" class="formulario__label">Repetir Contraseña</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="password2" id="password2">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+			</div>
+
+			<!-- Grupo: Correo Electronico -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo Electrónico</label>
+				<div class="formulario__grupo-input">
+					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+			</div>
+
+
+
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn">Enviar</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+			</div>
+		</form>
+	</main>
+
+	<script src="js/formulario.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html>
