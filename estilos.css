@@ -141,6 +141,11 @@ main {
 .formulario__grupo-incorrecto .formulario__label {
 	color: #E57373;
 }
+	/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+	.formulario {
+		grid-template-columns: 1fr;
+	}
 
 .formulario__grupo-incorrecto .formulario__validacion-estado {
 	color: #E57373;
