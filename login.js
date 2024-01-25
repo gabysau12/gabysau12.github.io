@@ -4,5 +4,7 @@ document.addEventListener('DOMContentLoaded',function(){
   var inputPassword = document.getElementById ('password');
   console.log(inputEmail);
   console.log(inputPassword);
+
+  const nombre = document.getElementBtId("name")
   
   
