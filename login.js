@@ -58,7 +58,7 @@ inputs.forEach((input) => {
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
-	const terminos = document.getElementById('terminos');
+	const correo = document.getElementById('correo');
 	if(campos.nombre && campos.password && campos.correo ){
 		formulario.reset();
 
