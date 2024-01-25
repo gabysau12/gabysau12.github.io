@@ -4,8 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
-  
-   
+  <script src="login.js"></script>
+        function validateEmail(){
+                
+                // Get our input reference.
+                var emailField = document.getElementById('user-email');
+                
+                // Define our regular expression.
+                var validEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+
+                // Using test we can check if the text match the pattern
+                if( validEmail.test(emailField.value) ){
+                    alert('Email is valid, continue with form submission');
+                    return true;
+                }else{
+                    alert('Email is invalid, skip form submission');
+                    return false;
+                }
+            }
+</script>
+</head>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -55,20 +73,16 @@
   </style>
 </head>
 <body>
-
-  <form>
+<form>
   
-<div>
-<label for="email"> Email: </label>
-<input type="text" id="Email" required/>
-</div>
-<div>
+<label for="user-email"> Email: </label>
+<input type="email" id="user-email" name="userEmail" />
+  
 <label for="password"> Password: </label>
 <input type="password" id="Password" required/>
 
-<button type="submit">Submit</button>
+<input type="submit" value="Validate" onclick="return validateEmail()"/></input>
 </form>
-</div>
-       <script src="login.js"></script>
+       
 </body>
 </html>
