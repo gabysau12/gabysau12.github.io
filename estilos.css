@@ -16,7 +16,7 @@ main {
 
 .formulario {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 	gap: 20px;
 }
 
@@ -26,6 +26,11 @@ main {
 	padding: 10px;
 	cursor: pointer;
 }
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+	.formulario {
+		grid-template-columns: 1fr;
+	}
 
 .formulario__grupo-input {
 	position: relative;
