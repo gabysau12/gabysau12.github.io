@@ -14,7 +14,7 @@ const expresiones = {
 const campos = {
 	nombre: false,
 	password: false,
-	correo: false,
+	correo: false
 }
 
 const validarFormulario = (e) => {
